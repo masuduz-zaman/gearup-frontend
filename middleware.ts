@@ -6,7 +6,6 @@ export function middleware(request: NextRequest) {
   const userRole = request.cookies.get("role")?.value; // customer | provider | admin
   const { pathname } = request.nextUrl;
 
-  // ১. যে রাউটগুলো লগইন ছাড়া ঢোকা যাবে না
   if (pathname.startsWith("/dashboard")) {
     if (!token) {
       return NextResponse.redirect(new URL("/login", request.url));
@@ -26,7 +25,7 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // ২. অলরেডি লগইন থাকলে লগইন/রেজিস্টার পেজে যেতে দেবে না
+
   if ((pathname === "/login" || pathname === "/register") && token) {
     return NextResponse.redirect(new URL(`/dashboard/${userRole}`, request.url));
   }

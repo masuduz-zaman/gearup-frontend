@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["images.unsplash.com", "res.cloudinary.com"], // গিয়ার ইমেজের জন্য
+    domains: ["images.unsplash.com", "res.cloudinary.com"], 
   },
   async rewrites() {
     return [
