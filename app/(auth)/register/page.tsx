@@ -30,7 +30,6 @@ export default function RegisterPage() {
 
     setPreview(imageUrl);
 
-    // পরে Cloudinary/ImageBB upload করলে এখানে URL সেট করবে
     setFormData({
       ...formData,
       photo: imageUrl,
@@ -75,7 +74,6 @@ export default function RegisterPage() {
           Create GearUp Account
         </h1>
 
-        {/* Profile Photo */}
         <div className="mt-8 flex justify-center">
           <div className="relative">
 
@@ -114,7 +112,7 @@ export default function RegisterPage() {
         </div>
 
         <p className="text-center mt-2 text-xs text-gray-500 dark:text-gray-400">
-          Profile picture 
+          Profile picture
         </p>
 
         <form
@@ -123,13 +121,13 @@ export default function RegisterPage() {
         >
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
-              Full Name
+              Name
             </label>
 
             <input
               type="text"
               required
-              placeholder="John Doe"
+              placeholder="Enter your name"
               value={formData.name}
               onChange={(e) =>
                 setFormData({
@@ -143,13 +141,13 @@ export default function RegisterPage() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
-              Email Address
+              Email
             </label>
 
             <input
               type="email"
               required
-              placeholder="you@example.com"
+              placeholder="Enter your email"
               value={formData.email}
               onChange={(e) =>
                 setFormData({
@@ -169,7 +167,7 @@ export default function RegisterPage() {
             <input
               type="password"
               required
-              placeholder="••••••••"
+              placeholder=""
               value={formData.password}
               onChange={(e) =>
                 setFormData({
