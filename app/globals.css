@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes slideInLeft {
+  from {
+    opacity: 2;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 5;
+    transform: translateX(100px);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 2;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 5;
+    transform: translateX(100px);
+  }
+}
